@@ -287,7 +287,7 @@ fun GoalsScreen(onBack: () -> Unit, viewModel: GoalsViewModel = hiltViewModel())
                             }
 
                             LinearProgressIndicator(
-                                progress = { goal.progress },
+                                progress = goal.progress,
                                 modifier = Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(3.dp)),
                                 color = if (goal.isCompleted) IncomeGreen else GoldPrimary,
                                 trackColor = BackgroundSurface
