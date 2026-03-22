@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             WealthManagerTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = BackgroundDark) {
-                    WealthManagerApp()
+                    WealthManagerNavGraph()
                 }
             }
         }
@@ -45,7 +45,7 @@ sealed class Screen(val route: String) {
 }
 
 @Composable
-fun WealthManagerApp() {
+fun WealthManagerNavGraph() {
     val navController = rememberNavController()
 
     NavHost(
