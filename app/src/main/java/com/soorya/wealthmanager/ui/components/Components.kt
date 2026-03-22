@@ -1,5 +1,6 @@
 package com.soorya.wealthmanager.ui.components
 
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -9,10 +10,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.*
-import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.*
 import com.soorya.wealthmanager.ui.theme.*
@@ -100,7 +98,7 @@ fun WealthScoreRing(
         contentAlignment = Alignment.Center
     ) {
         CircularProgressIndicator(
-            progress = { score / 100f },
+            progress = score / 100f,
             modifier = Modifier.size(120.dp),
             color = scoreColor,
             trackColor = BackgroundSurface,
@@ -205,9 +203,9 @@ fun LoadingDots() {
                 initialValue = 0.2f,
                 targetValue = 1f,
                 animationSpec = infiniteRepeatable(
-                    animation = androidx.compose.animation.core.tween(600),
-                    repeatMode = androidx.compose.animation.core.RepeatMode.Reverse,
-                    initialStartOffset = androidx.compose.animation.core.StartOffset(index * 150)
+                    animation = tween(600),
+                    repeatMode = RepeatMode.Reverse,
+                    initialStartOffset = StartOffset(index * 150)
                 ),
                 label = "alpha$index"
             )
