@@ -37,7 +37,7 @@ class WealthWidget : GlanceAppWidget() {
             Text(
                 text = "WEALTH",
                 style = TextStyle(
-                    color = ColorProvider(Color(0xFFD4AF37)),
+                    color = ColorProvider(day = Color(0xFFD4AF37), night = Color(0xFFD4AF37)),
                     fontSize = 10.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -46,7 +46,7 @@ class WealthWidget : GlanceAppWidget() {
             Text(
                 text = "Open App",
                 style = TextStyle(
-                    color = ColorProvider(Color(0xFFF0F0F0)),
+                    color = ColorProvider(day = Color(0xFFF0F0F0), night = Color(0xFFF0F0F0)),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium
                 )
@@ -55,7 +55,7 @@ class WealthWidget : GlanceAppWidget() {
             Text(
                 text = "Tap to view balance",
                 style = TextStyle(
-                    color = ColorProvider(Color(0xFF9090A0)),
+                    color = ColorProvider(day = Color(0xFF9090A0), night = Color(0xFF9090A0)),
                     fontSize = 10.sp
                 )
             )
