@@ -32,7 +32,7 @@ data class Goal(
     val emoji: String = "🎯",
     val createdAt: Long = System.currentTimeMillis()
 ) {
-    val progress: Float get() = (currentAmount / targetAmount).coerceIn(0f, 1f)
+    val progress: Float get() = (currentAmount / targetAmount).toFloat().coerceIn(0f, 1f)
     val isCompleted: Boolean get() = currentAmount >= targetAmount
     val remainingAmount: Double get() = (targetAmount - currentAmount).coerceAtLeast(0.0)
 }
