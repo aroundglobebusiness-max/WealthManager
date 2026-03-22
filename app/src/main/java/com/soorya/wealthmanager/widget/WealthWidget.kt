@@ -8,6 +8,7 @@ import androidx.glance.*
 import androidx.glance.action.*
 import androidx.glance.appwidget.*
 import androidx.glance.appwidget.action.actionStartActivity
+import androidx.glance.color.ColorProvider
 import androidx.glance.layout.*
 import androidx.glance.text.*
 import com.soorya.wealthmanager.MainActivity
