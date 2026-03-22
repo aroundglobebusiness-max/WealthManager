@@ -34,7 +34,7 @@ val incomeCategories = listOf(
     "🎁 Gift", "💰 Refund", "🏦 Business", "📦 Other"
 )
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun AddTransactionScreen(
     onDismiss: () -> Unit,
@@ -225,7 +225,6 @@ fun AddTransactionScreen(
                                     labelColor = GoldPrimary
                                 ),
                                 border = SuggestionChipDefaults.suggestionChipBorder(
-                                    enabled = true,
                                     borderColor = GoldPrimary.copy(alpha = 0.3f)
                                 )
                             )
@@ -276,8 +275,6 @@ fun AddTransactionScreen(
                                 selectedLabelColor = GoldPrimary
                             ),
                             border = FilterChipDefaults.filterChipBorder(
-                                enabled = true,
-                                selected = selected,
                                 selectedBorderColor = GoldPrimary.copy(alpha = 0.5f),
                                 borderColor = BackgroundSurface
                             )
